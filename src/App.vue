@@ -23,7 +23,7 @@ let pesan2 = ref("Hai Vue")
 
 <template>
   <div>
-    <span>{{ msg }}</span> <br>x
+    <span>{{ msg }}</span> <br>
     <span style="color: red;">Ini Warna Merah</span><br>
     <span>{{ headName }}</span> <br>
     <button :disabled="isButtonDisabled">Button</button> <br>
