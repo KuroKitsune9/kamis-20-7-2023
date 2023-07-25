@@ -10,25 +10,18 @@
         <h2 v-if="umur >= 17">Selamat datang, {{ nama }}!</h2>
         <p v-else>Maaf, kamu belum cukup umur.</p>
 
-        <ul>
-            <li v-for="item in items" :key="item.id">{{ item.hobi }}</li>
-        </ul>
+        <h2>{{ pesan }}</h2>
     </div>    
 </template>
 
 <script>
 export default {
     props: ['nama', 'umur', 'TTL', 'Kelamin', 'agama', 'Alamat'], //definisi props "nama dan umur"
-data() {
-    return {
-    items: [        
-        { id : 1, hobi: "Membaca"},
-        { id : 2, hobi: "Bermain Game"},
-        { id : 3, hobi: "Jalan Jalan"}
-    ],
-    pesan: 'Halo, ' + this.nama + '!',
+    data() {
+        return{
+            pesan: "Halo nama Saya :" + this.nama,
+        }
     }
-}
 }
 </script>
 
